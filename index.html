@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abthony soundboard</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 50px;
+        }
+
+        .audioContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .audioDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        audio {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- sounboard anthony (m4a in media folder) -->
+    <h1>Anthony soundboard</h1>
+    <div class="audioContainer">
+    <div class="audioDiv">
+        Buongiorno a tutti
+        <audio controls>
+            <source src="./media/Batt.m4a" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="audioDiv">
+        Eela
+        <audio controls>
+            <source src="./media/Eeeela.m4a" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="audioDiv">
+        Hola como te llamas
+        <audio controls>
+            <source src="./media/Hcta.m4a" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="audioDiv">
+        Ja en das toch nie normaal
+        <audio controls>
+            <source src="./media/Ja en das toch nie normaal.m4a" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+
+</body>
+</html>
