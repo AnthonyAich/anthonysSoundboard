@@ -6,7 +6,6 @@
     <title>Abthony soundboard</title>
     <style>
         body {
-            background-color: #000000;
             color: #ffffff;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
@@ -31,10 +30,126 @@
             color: #000000;
             border-radius: 10px;
             padding: 30px;
+            margin: 0 auto;
+
+            transition: all 1s ease-in-out;
+        }
+        .audioDiv:hover {
+            background-color: #ff0000;
+            color: #00ff00;
+            cursor: pointer;
+
+            transform: translateY(-100px) rotate(30deg);
+            transition: all 1s ease-in-out;
         }
 
         audio {
             width: 80%;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            z-index: -1;
+
+            background: url(./images/myself.webp) repeat center center fixed;
+            background-size: 150px;
+
+            filter: hue-rotate(90deg) contrast(100%) saturate(100%);
+        }
+        h1 {
+            /* old and debile animation */
+            animation: colorchange 50s infinite;
+            width: fit-content;
+            margin: 50px auto;
+            background-color: #00ff00;
+        }
+
+        .madeBy {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+
+            width: 300px;
+            height: 200px;
+
+            background-color: #00ff00;
+            color: #000000;
+
+            text-align: right;
+        }
+
+        .revoltehuisstijl {
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+
+            width: 300px;
+            height: 200px;
+
+            background-color: #000000;
+            color: #00ff00;
+
+            text-align: left;
+        }
+
+        @keyframes colorchange {
+            0% {
+                color: #ff0000;
+                box-shadow: 0px 0px 10px #ff0000;
+                transform: rotate(0deg);
+            }
+            10% {
+                color: #00ff00;
+                box-shadow: 0px 0px 10px #00ff00;
+                transform: rotate(360deg);
+            }
+            20% {
+                color: #0000ff;
+                box-shadow: 0px 0px 10px #0000ff;
+                transform: rotate(0deg);
+            }
+            30% {
+                color: #ffff00;
+                box-shadow: 0px 0px 10px #ffff00;
+            }
+            40% {
+                color: #00ffff;
+                box-shadow: 0px 0px 10px #00ffff;
+                transform: rotate(0deg);
+            }
+            50% {
+                color: #ff00ff;
+                box-shadow: 0px 0px 10px #ff00ff;
+                transform: rotate(360deg);
+            }
+            60% {
+                color: #ffffff;
+                box-shadow: 0px 0px 10px #ffffff;
+                transform: rotate(0deg);
+            }
+            70% {
+                color: #000000;
+                box-shadow: 0px 0px 10px #000000;
+            }
+            80% {
+                color: #ff0000;
+                box-shadow: 0px 0px 10px #ff0000;
+                transform: rotate(0deg);
+            }
+            90% {
+                color: #00ff00;
+                box-shadow: 0px 0px 10px #00ff00;
+                transform: rotate(360deg);
+            }
+            100% {
+                color: #0000ff;
+                box-shadow: 0px 0px 10px #0000ff;
+                transform: rotate(0deg);
+            }
         }
     </style>
 </head>
@@ -85,6 +200,16 @@
         </audio>
     </div>
 </div>
+<div class="madeBy">
+    <h2>Made by Anthony</h2>
+    <p>With sounds from Anthony</p>
+    <p>Anthony is also known as Anthony and somethimes people also say that they call him Anthony, but that does not really happen much. Most of the people call him Anthony.</p>
+</div>
+<div class="revoltehuisstijl">
+    Dit is in Revolte huisstijl
+</div>
+<div class="background">
 
+</div>
 </body>
 </html>
