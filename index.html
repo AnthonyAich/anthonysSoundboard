@@ -16,11 +16,9 @@
         }
 
         .audioContainer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
         }
 
         .audioDiv {
@@ -28,7 +26,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 20%;
+            width: 80%;
             background-color: #ffffff;
             color: #000000;
             border-radius: 10px;
@@ -36,7 +34,7 @@
         }
 
         audio {
-            width: 100%;
+            width: 80%;
         }
     </style>
 </head>
@@ -66,6 +64,18 @@
         Ja en das toch nie normaal
         <audio controls>
             <source src="./media/Ja en das toch nie normaal.m4a" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="audioDiv">
+        Jamojamojamoja
+        <audio controls>
+            <source src="./media/Jamojamojamoja.m4a" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="audioDiv">
+        Tdagmensen
+        <audio controls>
+            <source src="./media/Tdagmensen.m4a" type="audio/mpeg">
         </audio>
     </div>
 </div>
