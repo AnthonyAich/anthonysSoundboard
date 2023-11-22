@@ -10,6 +10,8 @@
             color: #ffffff;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
+
+            overflow: hidden;
         }
 
         * {
@@ -25,7 +27,7 @@
         h2, p {
             transform: rotate(-1.5deg);
         }
-
+        
         .audioContainer {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -33,6 +35,7 @@
         }
 
         .audioDiv {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -46,6 +49,19 @@
 
             transition: all 1s ease-in-out;
         }
+
+        .audioDiv .new {
+            position: absolute;
+            top: 5%;
+            left: -5%;
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 5px;
+            border-radius: 5px;
+            transform: rotate(-45deg);
+            transition: all 1s ease-in-out;
+        }
+
         .audioDiv:hover {
             background-color: #ff0000;
             color: #00ff00;
@@ -58,20 +74,72 @@
         audio {
             width: 80%;
         }
+
         .background {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
+            z-index: -2;
+        }
 
-            z-index: -1;
-
+        .background::before {
+            content: "";
+            position: absolute;
+            z-index: -3;
+            width: 200vw;
+            height: 300vh;
+            left: -50%;
+            top: -100%;
             background: url(./images/myself.webp) repeat center center fixed;
             background-size: 150px;
-
-            filter: hue-rotate(90deg) contrast(100%) saturate(100%);
+            transform:rotate(45deg);
+            opacity: 0.5;
+            animation: backgroundFlip 10s linear infinite;
         }
+
+        @keyframes backgroundFlip {
+            0% {
+                filter: hue-rotate(0deg);
+                transform: rotate(0deg);
+            }
+            10% {
+                filter: hue-rotate(90deg);
+            }
+            20% {
+                filter: hue-rotate(180deg);
+            }
+            30% {
+                filter: hue-rotate(270deg);
+                transform: rotate(360deg);
+            }
+            40% {
+                filter: hue-rotate(360deg);
+            }
+            50% {
+                filter: hue-rotate(450deg);
+            }
+            60% {
+                filter: hue-rotate(540deg);
+                transform: rotate(0deg);
+            }
+            70% {
+                filter: hue-rotate(630deg);
+            }
+            80% {
+                filter: hue-rotate(720deg);
+            }
+            90% {
+                filter: hue-rotate(810deg);
+                transform: rotate(360deg);
+            }
+            100% {
+                filter: hue-rotate(900deg);
+                transform: rotate(0deg);
+            }
+        }
+
         h1 {
             /* old and debile animation */
             animation: colorchange 50s infinite;
@@ -79,7 +147,7 @@
             margin: 50px auto;
             background-color: #00ff00;
         }
-
+        
         .madeBy {
             position: absolute;
             right: 5px;
@@ -163,6 +231,7 @@
                 transform: rotate(0deg);
             }
         }
+
     </style>
 </head>
 <body>
@@ -211,6 +280,16 @@
             <source src="./media/Ehallo.m4a" type="audio/mpeg">
         </audio>
     </div>
+    <!-- neinNein.mp3 -->
+    <div class="audioDiv">
+        <div class="new">
+            New sound!
+        </div>
+        Nein nein nein
+        <audio controls>
+            <source src="./media/neinNein.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </div>
 <div class="madeBy">
     <h2>Made by Anthony</h2>
@@ -223,7 +302,18 @@
     </h2>
 </div>
 <div class="background">
-
 </div>
+
+<div class="westFlemishForBehinners">
+    <h2>
+        West-Flemmish for behinners
+    </h2>
+    <div class="openingBox">
+        <!-- 
+            een emmer - e se
+         -->
+    </div>
+</div>
+
 </body>
 </html>
